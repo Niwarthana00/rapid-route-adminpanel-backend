@@ -1,0 +1,21 @@
+import { Router } from 'express';
+import {
+  getFareRules,
+  createFareRule,
+  updateFareRule,
+  getPayments,
+  getRevenueFacts,
+  getRevenueTrends,
+} from '../controllers/financeController.js';
+
+const router = Router();
+
+router.get('/fare-rules', getFareRules);
+router.post('/fare-rules', createFareRule);
+router.put('/fare-rules/:id', updateFareRule);
+
+router.get('/payments', getPayments);
+router.get('/revenue-facts', getRevenueFacts);
+router.get('/revenue-trends', getRevenueTrends);
+
+export default router;
