@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import { getVehicles, getVehicleById, createVehicle, updateVehicle, getMaintenanceLogs, createMaintenanceLog, getDriverAssignments, } from '../controllers/fleetController.js';
+const router = Router();
+router.get('/vehicles', getVehicles);
+router.get('/vehicles/:id', getVehicleById);
+router.post('/vehicles', createVehicle);
+router.put('/vehicles/:id', updateVehicle);
+router.get('/maintenance', getMaintenanceLogs);
+router.post('/maintenance', createMaintenanceLog);
+router.get('/assignments', getDriverAssignments);
+export default router;
